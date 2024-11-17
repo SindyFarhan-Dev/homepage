@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <header>
+        <h1>Detail Produk</h1>
+    </header>
+
+    <section id="product-detail">
+        <h2 id="product-name"></h2>
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+        <button onclick="addToCart()">Tambah ke Keranjang</button>
+    </section>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Simulasi data produk
+        const products = [
+            { id: 1, name: "Produk 1", description: "Deskripsi Produk 1", price: "Rp100.000" },
+            { id: 2, name: "Produk 2", description: "Deskripsi Produk 2", price: "Rp200.000" },
+            { id: 3, name: "Produk 3", description: "Deskripsi Produk 3", price: "Rp300.000" },
+        ];
+
+        const product = products.find(p => p.id == productId);
+        document.getElementById('product-name').innerText = product.name;
+        document.getElementById('product-description').innerText = product.description;
+        document.getElementById('product-price').innerText = product.price;
+
+        function addToCart() {
+            alert(`${product.name} telah ditambahkan ke keranjang!`);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherish - Product Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Cherish Logo">
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-details">
+      <div class="product-image">
+        <img src="product-image.jpg" alt="Product Name">
+      </div>
+      <div class="product-info">
+        <h1>Product Name</h1>
+        <p class="product-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.
+        </p>
+        <div class="product-specs">
+          <h3>Specifications</h3>
+          <ul>
+            <li>Material: Organic Cotton</li>
+            <li>Size: Medium</li>
+            <li>Color: Natural</li>
+            <li>Weight: 200g</li>
+          </ul>
+        </div>
+        <div class="product-actions">
+          <div class="product-price">$29.99</div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-reviews">
+      <h2>Reviews</h2>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="reviewer-info">
+            <div class="reviewer-image">
+              <img src="reviewer-image.jpg" alt="Reviewer Name">
+            </div>
+            <div class="reviewer-name">John Doe</div>
+          </div>
+          <div class="review-content">
+            <p>"I absolutely love this product! It's so soft and comfortable, and the quality is amazing."</p>
+            <div class="review-rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <!-- Add more review cards here -->
+      </div>
+    </section>
+
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="related-product-1.jpg" alt="Related Product 1">
+          </div>
+          <div class="product-info">
+            <h3>Related Product 1</h3>
+            <p>$24.99</p>
+            <a href="#" class="buy-now">Buy Now</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="related-product-2.jpg" alt="Related Product 2">
+          </div>
+          <div class="product-info">
+            <h3>Related Product 2</h3>
+            <p>$19.99</p>
+            <a href="#" class="buy-now">Buy Now</a>
+          </div>
+        </div>
+        <!-- Add more related product cards here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Cherish Logo">
+      </div>
+      <div class="footer-info">
+        <h3>Contact Us</h3>
+        <p>Email: info@cherish.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+      <p>&copy; 2023 Cherish. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
